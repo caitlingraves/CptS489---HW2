@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+
+        function validateEmail() {
+        const email = document.getElementById("email").value;
+        const valid = email.includes("@");
+        if (!valid || !(email.endsWith(".com") || email.endsWith(".org") || email.endsWith(".edu"))) {
+            alert("incorrect email!");
+        }
+
+        const name = document.getElementById("name").value;
+        if (name.length < 5 || name.length > 20) {
+            alert("name below 5 or above 20 characters");
+        }
+    }
+    </script>
+    <style> 
+        body {
+            background-color: rgb(235, 235, 235);
+        }
+        .container {
+            width: 100%;
+            padding: 0;
+            display: grid;
+            box-sizing: border-box;
+            position: relative;
+            
+        }
+        .sign {
+            margin-left: 0px;
+            background-color: rgb(204, 204, 228);
+            margin-left: 0;
+            
+        }
+        .image {
+            float: left;
+            margin: 0 1em .4em 0;
+            max-width: 60%;
+            overflow: hidden;
+        }
+        .white {
+            background-color: white;
+            
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="container" style="padding:50;"><a style="color: orange; font-size:30px;" href="google.com">iPetitions</a></div>
+    </header>
+    <div class="container">
+        <div class="row g-5 align-center margin-right: 0px">
+            <div class="col-md-8 order-md-1 box petition white"style="margin-right: 0px;">
+                <div class="white" style="border:1px solid rgb(215, 215, 215); color: black; margin-right: 0px;"><h1>Move the 489 Lecture to the Evening</h1>
+                <p style="color: orange"> 661 people have signed this petition. Add your name now! </p>
+                <p>The Office Of The Governor of Guam</p>
+                </div>
+                
+                <div style="display:inline">
+                    <div class="image" style="display:inline; margin-right: 0"><img src="petition.jpg" style="width:300px; height:200px; margin-right: 20px;"></div>
+                    <u><p style="display:inline">***The Office of the Governor is the sponsor of this petition, but is NOT the group requesting donations of any kind. You are able to sign the petition without donating to ipetitions which is the platform hosting the petition. No donations to ipetitions is required. DO NOT DONATE.***</p>
+                    </u></br><br>
+                        Our people deserve more than just a hospital. They deserve a modern medical complex.
+                    </br><br>
+                        As a nurse and as your Governor, I want our island to have access to the best in health care services.
+                    </br><br>
+                        Limiting ourselves to building a stand-alone hospital ensures we only receive standard hospital care.
+                    </br><br>
+                        Expanding our vision to build a state-of-the-art medical complex with specialized care for patients SUPPORTS our nurses and local medical industry, DECREASES drive time between facilities, and IMPROVES function and operations.
+                    </div>
+            </div>
+            <div class="col-md-3 order-md-2 box sign">
+               
+                <!--FORM BELOW:-->
+    <form method="GET" onsubmit="return validateEmail()">
+      <fieldset>
+        <legend>Sign this Petition</legend>
+        <div id="liveAlertPlaceholder"></div>
+        <div>
+          <label for="Name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name*"
+          />
+        </div><br>
+        <div>
+          <label for="Email*"></label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email*"
+          />
+        </div><br>
+        <div>
+            <label for="Comments"></label>
+            <input
+              type="text"
+              id="Comments"
+              name="Comments"
+              placeholder="Comments"
+            />
+          </div><br>
+        
+        <button type="submit" style="background-color:rgb(138, 202, 138); color: white;">Sign Petition</button>
+      </fieldset>
+    </form>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    
+  </body>
+</html>
