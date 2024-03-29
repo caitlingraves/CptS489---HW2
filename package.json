@@ -1,0 +1,32 @@
+{
+  "name": "hw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/www",
+  "bin": {
+    "hw2": "bin/www"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "accepts": "^1.3.8",
+    "array-flatten": "^3.0.0",
+    "body-parser": "^1.20.2",
+    "bytes": "^3.1.2",
+    "content-disposition": "^0.5.4",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "encodeurl": "^2.0.0",
+    "escape-html": "^1.0.3",
+    "etag": "^1.8.1",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "qs": "^6.12.0",
+    "sqlite3": "^5.1.7"
+  }
+}
