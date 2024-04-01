@@ -29,6 +29,9 @@
             alert("name below 5 or above 20 characters");
         }
     }
+
+
+    
     </script>
     <style> 
         body {
@@ -89,7 +92,7 @@
             <div class="col-md-3 order-md-2 box sign">
                
                 <!--FORM BELOW:-->
-    <form method="GET" onsubmit="return validateEmail()">
+    <form method="POST" onsubmit="return validateEmail()">
       <fieldset>
         <legend>Sign this Petition</legend>
         <div id="liveAlertPlaceholder"></div>
@@ -117,7 +120,7 @@
             <input
               type="text"
               id="comment"
-              name="Comments"
+              name="comment"
               placeholder="Comments"
             />
           </div><br>
@@ -130,6 +133,15 @@
         </div>
     </div>
     <div></div>
+    <h1>Comments</h1>
+  <ul>
+    <% comments.forEach(comment => { %>
+      <li><strong>Name:</strong> <%= comment.name %></li>
+      <li><strong>Email:</strong> <%= comment.email %></li>
+      <li><strong>Comment:</strong> <%= comment.comment %></li>
+    <% }); %>
+  </ul>
+
     
   </body>
 </html>

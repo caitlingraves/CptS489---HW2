@@ -1,7 +1,7 @@
 
 
-CREATE TABLE IF NOT EXISTS COMMENT_TABLE ( commentid TEXT PRIMARY KEY NOT NULL, name TEXT NOT NULL, email TEXT NOT NULL, comment TEXT, commentNum INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS COMMENTS (name TEXT NOT NULL PRIMARY KEY NOT NULL, email TEXT NOT NULL, comment TEXT);
 
-DELETE FROM COMMENT_TABLE;
+DELETE FROM COMMENTS;
 
-INSERT INTO COMMENT_TABLE VALUES ('1111', 'Caitlin', 'caitlin.graves@wsu.edu', 'this is a comment', '1');
+INSERT INTO COMMENTS VALUES ('Caitlin', 'caitlin.graves@wsu.edu', 'this is a comment');
