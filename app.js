@@ -49,7 +49,7 @@ app.use(function(err, req, res, next) {
 });
 
 async function setup() {
-  const subu = await Comments.create({ name: "subu", email: "1234", comment: "" });
+  const subu = await Comments.create({ name: "subu", email: "1234", comment: "this is a comment. Enter name, email, and an optional comment in the form to put your own" });
   // console.log("comment instance created...")
 }
 

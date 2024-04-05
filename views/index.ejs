@@ -17,7 +17,7 @@
     ></script>
     <script>
 
-        function validateEmail() {
+      function validateEmail() {
         const email = document.getElementById("email").value;
         const valid = email.includes("@");
         if (!valid || !(email.endsWith(".com") || email.endsWith(".org") || email.endsWith(".edu"))) {
@@ -28,14 +28,14 @@
         if (name.length < 5 || name.length > 20) {
             alert("name below 5 or above 20 characters");
         }
-    }
+      }
 
 
     
     </script>
     <style> 
         body {
-            background-color: rgb(235, 235, 235);
+            background-color: #efefef;
         }
         .container {
             width: 100%;
@@ -47,7 +47,7 @@
         }
         .sign {
             margin-left: 0px;
-            background-color: rgb(204, 204, 228);
+            background-color: rgb(208, 225, 236);
             margin-left: 0;
             
         }
@@ -66,7 +66,7 @@
   </head>
   <body>
     <header>
-        <div class="container" style="padding:50;"><a style="color: orange; font-size:30px;" href="google.com">iPetitions</a></div>
+        <div class="container" style="padding:50;"><a style="color: orange; font-size:30px;" href="google.com"><img src="/images/logo.png" style="width:200px"></a></div>
     </header>
     <div class="container">
         <div class="row g-5 align-center margin-right: 0px">
@@ -88,8 +88,18 @@
                     </br><br>
                         Expanding our vision to build a state-of-the-art medical complex with specialized care for patients SUPPORTS our nurses and local medical industry, DECREASES drive time between facilities, and IMPROVES function and operations.
                     </div>
+                    <div>
+                      <h1 style="color:rgb(191, 191, 191); font-size: 18px;">COMMENT</h1>
+                        <% comments.forEach(comment => { %>
+                          <p1 style="background-color:rgb(191, 191, 191); padding:2px; border-radius:6px;"><%= comment.name %></p1>
+                          <hr style="padding:0px; margin:0px; margin-top:4px;">
+                          <%= comment.comment %>
+                          <br>
+                        <% }); %>
+                  </div>
             </div>
             <div class="col-md-3 order-md-2 box sign">
+            
                
                 <!--FORM BELOW:-->
     <form method="POST" onsubmit="return validateEmail()">
@@ -125,7 +135,7 @@
             />
           </div><br>
         
-        <input type="submit" value="Submit petition" style="background-color:rgb(138, 202, 138); color: white;"></button>
+        <input type="submit" value="SIGN PETITION" style="background-color:#2ccb6f; color: white; border-radius: 8px; padding:10px"></button>
         </form>
       </fieldset>
     </form>
@@ -133,14 +143,6 @@
         </div>
     </div>
     <div></div>
-    <h1>Comments</h1>
-  <ul>
-    <% comments.forEach(comment => { %>
-      <li><strong>Name:</strong> <%= comment.name %></li>
-      <li><strong>Email:</strong> <%= comment.email %></li>
-      <li><strong>Comment:</strong> <%= comment.comment %></li>
-    <% }); %>
-  </ul>
 
     
   </body>

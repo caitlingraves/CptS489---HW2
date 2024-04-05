@@ -43,6 +43,7 @@ router.post('/', async (req, res) => {
   try {
     const { name, email, comment } = req.body;
     const newComment = await Comments.create({ name, email, comment });
+    res.redirect("/")
   } catch (error) {
     console.error('Error adding comment:', error);
     res.status(500).send('Internal Server Error');
